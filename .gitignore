@@ -1,0 +1,11 @@
+# Expensify App Ignore
+
+# No IDE
+.idea
+
+# MAC
+.DS_Store
+
+#/Node
+node_modules
+*/**/node_modules
