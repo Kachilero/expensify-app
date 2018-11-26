@@ -9,3 +9,6 @@
 #/Node
 node_modules
 */**/node_modules
+
+# Ignore the public folder
+public
