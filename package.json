@@ -13,7 +13,9 @@
     "build-watch": "webpack --watch",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "test": "jest --config=jest.config.json",
-    "test-watch": "npm test -- --watch"
+    "test-watch": "npm test -- --watch",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "dependencies": {
     "babel-core": "6.25.0",
