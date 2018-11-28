@@ -7,6 +7,7 @@
   "scripts": {
     "serve": "live-server public",
     "dev-server": "webpack-dev-server",
+    "express-server": "node server/server.js",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "build-watch": "webpack --watch",
@@ -25,6 +26,7 @@
     "enzyme": "3.0.0",
     "enzyme-adapter-react-16": "1.0.0",
     "enzyme-to-json": "3.0.1",
+    "express": "^4.15.4",
     "jest": "20.0.4",
     "live-server": "^1.2.0",
     "moment": "^2.22.2",
