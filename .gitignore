@@ -10,5 +10,8 @@
 node_modules
 */**/node_modules
 
-# Ignore the public folder
-public
+# Ignore generated files in the public folder
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
