@@ -27,3 +27,8 @@ Use any of the following to build/deploy.
     "heroku-postbuild": "npm run build:prod"
 ```
 
+## List of libraries and technologies
+For easy referrence
+
+- [MomentJS](https://momentjs.com) - Parse, validate, manipulate and display dates and times in Javascript
+- [NumeralJS](http://numeraljs.com) - A Javascript library for formatting and manipulating numbers

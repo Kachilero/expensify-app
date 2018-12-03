@@ -6,10 +6,3 @@ exports[`should render ExpensesDashboardPage correctly 1`] = `
   <Connect(ExpenseList) />
 </div>
 `;
-
-exports[`should render NotFoundPage correctly 1`] = `
-<div>
-  <Connect(ExpenseListFilters) />
-  <Connect(ExpenseList) />
-</div>
-`;
