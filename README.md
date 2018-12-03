@@ -1,18 +1,29 @@
-# BoilerPlate with React
+# Expesify 
+A simple expenses application written in [React](https://reactjs.org).
 
-## To run the program locally without webpack
-```
-babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+This repo follows along with Andrew J. Mead's [Complete React Web Developer Course](https://mead.io/).
+The goal of the course is to build out this app and deploy it with [Heroku](https://www.heroku.com) while learning all of the concepts of React.
+
+## Next Steps
+- Connecting to [Firebase](https://firebase.google.com)
+- Firebase with [Redux](https://redux.js.org)
+- Styling and next the future
+
+## Updates
+- 12.2.218: Finished the basics of the app as well as testing. Have deployed the app to Heroku.
+
+## List on NPM scrips
+Use any of the following to build/deploy.
+```json
+    "dev-server": "webpack-dev-server",
+    "express-server": "node server/server.js",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "build-watch": "webpack --watch",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "test": "jest --config=jest.config.json",
+    "test-watch": "npm test -- --watch",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
 ```
 
-In another console, in the indecision_app folder run
-```
-live-server public
-```
-
-## Adding a `--watch` flag
-We can't just add `--watch` to `yarn test` as it then gets associated with `yarn` not `test`. So we need to pass the `--watch` flag down to the script by doing:
-```bash
-yarn test -- --watch
-```
-The extra `--` says that it applies to the first argument, and the second to the second.
