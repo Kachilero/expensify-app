@@ -4,6 +4,8 @@ A simple expenses application written in [React](https://reactjs.org).
 This repo follows along with Andrew J. Mead's [Complete React Web Developer Course](https://mead.io/).
 The goal of the course is to build out this app and deploy it with [Heroku](https://www.heroku.com) while learning all of the concepts of React.
 
+Heroku App URL = [https://alejandro-react-expensify.herokuapp.com](https://alejandro-react-expensify.herokuapp.com)
+
 ## Next Steps
 - Connecting to [Firebase](https://firebase.google.com)
 - Firebase with [Redux](https://redux.js.org)
@@ -32,3 +34,4 @@ For easy referrence
 
 - [MomentJS](https://momentjs.com) - Parse, validate, manipulate and display dates and times in Javascript
 - [NumeralJS](http://numeraljs.com) - A Javascript library for formatting and manipulating numbers
+- [Heroku](https://dashboard.heroku.com)
