@@ -12,3 +12,7 @@ node_modules
 
 # Ignore generated files in the public folder
 public/dist
+
+# Ignore sensitive information
+.env.development
+.env.test

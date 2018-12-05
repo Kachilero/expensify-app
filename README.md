@@ -35,3 +35,5 @@ For easy referrence
 - [MomentJS](https://momentjs.com) - Parse, validate, manipulate and display dates and times in Javascript
 - [NumeralJS](http://numeraljs.com) - A Javascript library for formatting and manipulating numbers
 - [Heroku](https://dashboard.heroku.com)
+- [Firebase](https://firebase.google.com)
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
