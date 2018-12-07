@@ -2,12 +2,6 @@
  * Connect to Firebase Database
  * @link https://firebase.google.com/docs
  */
-import moment from 'moment';
-let now = moment().format("mm:ss:SSSS");
-console.log("Firebase Called at ", now);
-
-
-
 import firebase from 'firebase';
 
 // Initialize Firebase
@@ -19,7 +13,7 @@ const config = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 };
-console.log(config);
+
 // Init connection to the DB
 firebase.initializeApp(config);
 

@@ -37,3 +37,29 @@ export const removeExpense = ({ id } = {}) => ({
   type: 'REMOVE_EXPENSE',
   id
 });
+
+// SET EXPENSES
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
+  expenses
+});
+
+export const startSetExpenses = () => {
+  return (dispatch) => {
+
+    // Load data into app
+    return db.ref('expenses')
+      .once('value')
+      .then((snapshot) => {
+        const expenses = [];
+        snapshot.forEach((childSnapshot) => {
+          expenses.push({
+            id: childSnapshot.key,
+            ...childSnapshot.val()
+          });
+        });
+
+        dispatch(setExpenses(expenses));
+      })
+  }
+};
