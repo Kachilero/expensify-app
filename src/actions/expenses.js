@@ -3,8 +3,8 @@ import uuid from 'uuid';
 import db from '../firebase/firebase';
 
 export const addExpense = (expense) => ({
-    type: 'ADD_EXPENSE',
-    expense
+  type: 'ADD_EXPENSE',
+  expense
 });
 
 export const startAddExpense = (expenseData = {}) => {
@@ -15,7 +15,7 @@ export const startAddExpense = (expenseData = {}) => {
       amount = 0,
       createdAt = 0
     } = expenseData;
-    const expense = { description, note, amount, createdAt };
+    const expense = {description, note, amount, createdAt};
 
     // Save to DB
     return db.ref('expenses').push(expense).then((ref) => {
@@ -34,19 +34,30 @@ export const editExpense = (id, updates) => ({
   updates
 });
 
+export const startEditExpense = (id, updates) => {
+  return (dispatch) => {
+    // Update DB
+    return db.ref(`expenses/${id}`)
+      .update(updates)
+      .then(() => {
+        dispatch(editExpense(id, updates))
+      });
+  }
+};
+
 // REMOVE EXPENSE
-export const removeExpense = ({ id } = {}) => ({
+export const removeExpense = ({id} = {}) => ({
   type: 'REMOVE_EXPENSE',
   id
 });
 
-export const startRemoveExpense = ({ id } = {}) => {
+export const startRemoveExpense = ({id} = {}) => {
   return (dispatch) => {
 
     return db.ref(`expenses/${id}`)
       .remove()
       .then(() => {
-        dispatch(removeExpense({ id }));
+        dispatch(removeExpense({id}));
       });
   };
 };
