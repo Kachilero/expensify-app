@@ -1,4 +1,8 @@
-/***/
+/**
+ * Handles routing on private pages
+ * @export PrivateRoute JSX component
+ * @export Default JSX component
+ */
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
