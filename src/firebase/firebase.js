@@ -7,7 +7,7 @@ import firebase from 'firebase';
 // Initialize Firebase
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTO_DOMAIN,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
   databaseURL: process.env.FIREBASE_DATABASE_URL,
   projectId: process.env.FIREBASE_PROJECT_ID,
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
@@ -19,26 +19,8 @@ firebase.initializeApp(config);
 
 // Set the database to a variable
 const db = firebase.database();
+// Setup provider
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, db as default };
-
-/*Callback function
-const onComplete = () => {
-  let timeNow = moment().format("mm:ss:SSSS");
-  console.log("Completed at: ", timeNow);
-  db.ref('expense').off();
-};
-
-convert to array
-const convertToArray = (snapshot) => {
-  const expenseArray = [];
-  snapshot.forEach((childSnap) => {
-    expenseArray.push({
-      id: childSnap.key,
-      ...childSnap.val()
-    })
-  });
-  return expenseArray;
-};*/
-
+export { firebase, googleAuthProvider, db as default };
 
