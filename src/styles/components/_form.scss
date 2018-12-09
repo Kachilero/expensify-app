@@ -1,0 +1,17 @@
+/**
+Form styles
+*/
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  .form_error {
+    margin: 0 0 $m-size 0;
+    font-style: italic;
+  }
+
+  > * {
+    margin-bottom: $m-size;
+  }
+}

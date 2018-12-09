@@ -1,0 +1,41 @@
+/**
+Button Styling;
+*/
+
+.button {
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: $font-large;
+  font-weight: 300;
+  line-height: 1;
+  padding: $s-size;
+  text-decoration: none;
+
+  &__blue {
+    background: $primaryColor;
+    color: $secondaryTextColor;
+
+    &:hover {
+      background: darken($primaryColor, 10);
+    }
+  }
+
+  &__link {
+    background: transparent;
+    color: $secondaryTextColor;
+
+    &:hover {
+      color: darken($secondaryTextColor, 5);
+    }
+  }
+
+  &__gray {
+    background: $medium-gray;
+    color: $secondaryTextColor;
+
+    &:hover {
+      background: darken($medium-gray, 5);
+    }
+  }
+}
