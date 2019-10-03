@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Expesify 
 A simple expenses application written in [React](https://reactjs.org).
 
