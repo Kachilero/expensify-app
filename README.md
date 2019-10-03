@@ -6,14 +6,6 @@ The goal of the course is to build out this app and deploy it with [Heroku](http
 
 Heroku App URL = [https://alejandro-react-expensify.herokuapp.com](https://alejandro-react-expensify.herokuapp.com)
 
-## Next Steps
-- Connecting to [Firebase](https://firebase.google.com)
-- Firebase with [Redux](https://redux.js.org)
-- Styling and next the future
-
-## Updates
-- 12.2.218: Finished the basics of the app as well as testing. Have deployed the app to Heroku.
-
 ## List on NPM scrips
 Use any of the following to build/deploy.
 ```json
